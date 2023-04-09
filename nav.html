@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Navigation menu</title>
+ <link rel="stylesheet" href="nav.css">
+</head>
+<body>
+   <header>
+    <a href="#" class="logo">Logo</a>
+    <div class="group">
+      <ul class="navigation">
+         <li><a href="#">Home</a></li>
+         <li><a href="#">About</a></li>
+         <li><a href="#">serives</a></li>
+         <li><a href="#">Blog</a></li>
+      </ul>
+      <div class="search">
+         <span class="icon">
+          <ion-icon name="search-outline"></ion-icon>
+          <ion-icon name="close-circle-outline"></ion-icon>
+         </span>
+      </div>
+      <ion-icon name="menu-outline" class="Menutoggle"></ion-icon>
+    </div>
+    <div class="searchBox">
+     <input type="text" placeholder="search here...">
+    </div>
+   </header>
+   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script>
+ let searchBtn = document.querySelector('.searchBtn');
+ let closeBtn = document.querySelector('closeBnt');
+ let searchBox = document.querySelector('searchBox');
+ searchBtn.onclick = function(){
+  searchBox.classList.add('active');
+  closeBtn.classList.add('active');
+  searchBtn.classList.add('active');
+ }
+
+ closeBtn.onclick = function(){
+  searchBox.classList.remove('active');
+  closeBtn.classList.remove('active');
+  searchBtn.classList.remove('active');
+ }
+</script>
+</body>
+</html>
